@@ -17,20 +17,18 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="tbl_users")
+@Table(name="tbl_stocks")
 @Setter
 @Getter
 @ToString
-public class Users {
+public class Stock {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-
-    private String role;
-    private String email;
+    private String product;
+    private Long quantity;
     @CreationTimestamp
     @Column(name="created_at", nullable=false, updatable=false)
     private Date createdAt;
